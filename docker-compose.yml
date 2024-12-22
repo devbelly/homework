@@ -1,0 +1,14 @@
+services:
+  db:
+    image: library/mysql:latest
+    platform: linux/x86_64
+    container_name: homework
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: homework
+      MYSQL_USER: homework-user
+      MYSQL_PASSWORD: password
+      TZ: Asia/Seoul
